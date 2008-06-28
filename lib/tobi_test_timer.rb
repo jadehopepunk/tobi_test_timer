@@ -27,7 +27,7 @@ class Test::Unit::TestCase
     end_time = Time.now
 
     duration = (end_time - begin_time) 
-    long_test = duration > '.00025'.to_f
+    long_test = duration > '.25'.to_f
     puts "\nSLOW TEST: #{duration} - #{self.name}" if long_test
   end
   
