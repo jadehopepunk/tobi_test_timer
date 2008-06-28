@@ -1,4 +1,5 @@
 TobiTestTimer
 =============
 
-Description goes here
+extends Test::Unit::TestResult and Test::Unit::TestCase to add timing
+and notify you immediately when and error or failure occures.
