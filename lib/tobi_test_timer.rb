@@ -8,12 +8,12 @@ class Test::Unit::TestCase
     result.class.class_eval do
       
       def add_error_with_log_error(error)
-        puts error.to_s
+        puts "\nERROR: #{error.test_name}"
         add_error_without_log_error(error)
       end
     
       def add_failure_with_log_failure(failure)          
-        puts failure.to_s
+        puts "\nFAILURE: #{failure.test_name}"
         add_failure_without_log_failure(failure)
       end
     
@@ -27,7 +27,7 @@ class Test::Unit::TestCase
     end_time = Time.now
 
     duration = (end_time - begin_time) 
-    long_test = duration > '.25'.to_f
+    long_test = duration > '5.0'.to_f
     puts "\nSLOW TEST: #{duration} - #{self.name}" if long_test
   end
   
